@@ -148,29 +148,19 @@
             <li>📧 Email: <a href="mailto:kjsmobiledognailservices@gmail.com">kjsmobiledognailservices@gmail.com</a></li>
           </ul>
         </div>
-        <form class="card form" action="#" method="post" onsubmit="event.preventDefault(); alert('Thanks! We will contact you to confirm your appointment.');">
-          <label>
-            Your Name
-            <input type="text" placeholder="Jane Doe" required>
+        <form class="card form" action="https://formspree.io/f/xpwlndbp" method="POST">
+          <label>Your Name<input name="name" type="text" placeholder="Jane Doe" required>
           </label>
-          <label>
-            Phone or Email
-            <input type="text" placeholder="(555) 555‑1234 or jane@example.com" required>
+          <label>Phone or Email<input name="contact" type="text" placeholder="(555) 555‑1234 or jane@example.com" required>
           </label>
-          <label>
-            Dog’s Name & Breed
-            <input type="text" placeholder="Buddy — Labrador mix" required>
+          <label>Dog’s Name & Breed<input name="pet" type="text" placeholder="Buddy — Labrador mix" required>
           </label>
-          <label>
-            Preferred Date
-            <input type="date" required>
+          <label>Preferred Date<input name="date" type="date" required>
           </label>
-          <label>
-            Notes
-            <textarea rows="4" placeholder="Any details we should know (anxious pup, special handling, etc.)"></textarea>
+          <label>Notes<textarea name="message" rows="4" placeholder="Any details we should know (anxious pup, special handling, etc.)"></textarea>
           </label>
-          <button type="submit" class="btn block">Request Appointment</button>
-          <p class="fine">Submissions are requests only—appointments are confirmed via text/email.</p>
+          <input type="hidden" name="_subject" value="New Booking Request — KJ’s Mobile Dog Nail Services"><input type="hidden" name="_next" value="https://kjsmobiledognailservices.github.io/kjs-mobile-dog-nail-services/?submitted=1"><button type="submit" class="btn block">Request Appointment</button>
+          <p class="fine">We’ll confirm your appointment via text or email after you submit.</p>
         </form>
       </div>
     </section>
@@ -186,5 +176,20 @@
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
+
+<script>
+(function(){
+  const params = new URLSearchParams(window.location.search);
+  if (params.get('submitted') === '1') {
+    var d = document.createElement('div');
+    d.textContent = 'Thanks! Your request was sent. We will get back to you shortly.';
+    d.setAttribute('role','status');
+    d.style.cssText = 'position:fixed;left:50%;transform:translateX(-50%);bottom:16px;background:#16a34a;color:#fff;padding:12px 16px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,.2);z-index:9999';
+    document.body.appendChild(d);
+    setTimeout(()=>{ d.remove(); }, 7000);
+  }
+})();
+</script>
+
 </body>
 </html>
