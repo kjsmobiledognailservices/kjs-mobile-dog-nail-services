@@ -1,0 +1,61 @@
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:#1f2a37;background:#fff}
+.container{max-width:1050px;margin:0 auto;padding:0 20px}
+.site-header{position:sticky;top:0;background:#ffffffd9;backdrop-filter:saturate(1.2) blur(8px);border-bottom:1px solid #eef2f7;z-index:9}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+.brand{display:flex;gap:12px;align-items:center}
+.brand h1{font-size:20px;margin:0}
+.tagline{margin:0;color:#6b7280;font-size:13px}
+.paw-logo{width:42px;height:42px;border-radius:12px;background:radial-gradient(circle at 30% 30%,#ffbdb2 0,#ff8a6c 60%,#ff6a57 100%);position:relative;box-shadow:0 6px 14px rgba(0,0,0,.08)}
+.paw-logo:before,.paw-logo:after{content:'';position:absolute;background:#fff;border-radius:50%}
+.paw-logo:before{width:9px;height:9px;top:6px;left:7px;box-shadow:14px 2px 0 0 #fff,28px 6px 0 0 #fff,18px 16px 0 0 #fff}
+.paw-logo:after{width:16px;height:16px;bottom:6px;right:8px}
+.top-nav{display:flex;gap:14px;align-items:center}
+.top-nav a{color:#111827;text-decoration:none;padding:8px 10px;border-radius:8px;font-weight:600}
+.top-nav a:hover{background:#f3f4f6}
+.btn{display:inline-block;padding:12px 18px;border-radius:10px;border:1px solid #111827;font-weight:700;text-decoration:none;color:#111827}
+.btn.small{padding:8px 12px}
+.btn.block{display:block;width:100%}
+.hero{background:linear-gradient(180deg,#fff, #fff 50%, #fff7f5 100%);border-bottom:1px solid #f1f5f9}
+.hero-inner{display:grid;grid-template-columns:1.2fr .8fr;gap:24px;align-items:center;padding:48px 0}
+.hero h2{font-size:34px;line-height:1.1;margin:0 0 10px}
+.hero p{font-size:16px;color:#374151;margin:0 0 18px}
+.appt-note{color:#6b7280;font-size:14px}
+.hero-art{position:relative;height:220px}
+.paw{position:absolute;border-radius:50%;opacity:.25;background:#ff7b61;filter:blur(.2px)}
+.paw.big{width:150px;height:150px;right:20px;top:20px}
+.paw.mid{width:85px;height:85px;right:120px;bottom:10px}
+.paw.small{width:55px;height:55px;right:40px;bottom:70px}
+.section{padding:48px 0}
+.section.alt{background:#fafafb}
+.section h3{font-size:24px;margin:0 0 16px}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start}
+.checklist{padding-left:18px}
+.checklist li{margin:8px 0}
+.card{background:#fff;border:1px solid #e5e7eb;border-radius:14px;padding:18px;box-shadow:0 6px 14px rgba(0,0,0,.04)}
+.card.note h4{margin:0 0 10px}
+.price-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.price-card{border:1px solid #e5e7eb;border-radius:14px;padding:18px;text-align:center;background:#fff}
+.price-card .price{font-size:28px;margin:6px 0 0}
+.price-card.featured{outline:3px solid #111827}
+.fine{font-size:12px;color:#6b7280}
+.hours{list-style:none;padding-left:0;margin:0 0 8px}
+.appt-only{font-weight:700}
+.contact{border-top:1px solid #eef2f7}
+.contact-list{list-style:none;padding-left:0}
+.contact-list li{margin:8px 0}
+.form label{display:block;font-weight:600;margin:10px 0 6px}
+.form input,.form textarea{width:100%;padding:12px;border:1px solid #e5e7eb;border-radius:10px;font:inherit}
+.form button{margin-top:12px}
+.site-footer{border-top:1px solid #eef2f7;background:#fff}
+.footer-inner{display:flex;justify-content:space-between;align-items:center;padding:18px 0}
+.back-to-top{text-decoration:none;color:#111827}
+@media (max-width: 860px){
+  .hero-inner{grid-template-columns:1fr}
+  .grid-2{grid-template-columns:1fr}
+  .price-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width: 520px){
+  .price-grid{grid-template-columns:1fr}
+  .top-nav{display:none}
+}
