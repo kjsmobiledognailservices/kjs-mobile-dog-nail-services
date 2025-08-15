@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>KJ’s Mobile Dog Nail Services Appointment Tracker</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="KJ's Appointments">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" sizes="192x192" href="icons/icon-192.png">
+  <link rel="icon" sizes="512x512" href="icons/icon-512.png">
+  <meta name="theme-color" content="#1877F2">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>🐾 KJ’s Mobile Dog Nail Services</h1>
+  <p class="subtitle">Appointment Tracker</p>
+</header>
+
+<main>
+  <section class="toolbar">
+    <button id="btnNew" class="primary">+ New Appointment</button>
+    <input id="search" type="search" placeholder="Search (client, pet, phone, notes)…" />
+    <select id="filterStatus">
+      <option value="all">All</option>
+      <option value="scheduled">Scheduled</option>
+      <option value="completed">Completed</option>
+      <option value="canceled">Canceled</option>
+    </select>
+    <select id="filterWhen">
+      <option value="upcoming">Upcoming</option>
+      <option value="today">Today</option>
+      <option value="past">Past</option>
+      <option value="all">All dates</option>
+    </select>
+    <button id="btnExport">Export CSV</button>
+    <button id="btnBackup">Backup (JSON)</button>
+    <label class="importLabel">Restore JSON<input id="importJson" type="file" accept=".json,application/json" hidden></label>
+    <button id="btnReports" class="ghost">Reports</button>
+    <label class="importLabel">
+      Import CSV
+      <input id="importCsv" type="file" accept=".csv,text/csv" hidden>
+    </label>
+    <button id="btnInstall" class="ghost" hidden>Install App</button>
+    <button id="btnShare" class="ghost">Share Link</button>
+  </section>
+
+  <section id="list"></section>
+</main>
+
+<!-- Modal -->
+<dialog id="dlg">
+  <form id="form" method="dialog">
+    <h2 id="dlgTitle">New Appointment</h2>
+    <div class="grid">
+      <label>Client Name<input name="client" required></label>
+      <label>Phone<input name="phone" type="tel" inputmode="tel" placeholder="512-555-1234"></label>
+      <label>Pet Name<input name="pet" required></label>
+      <label>Breed<input name="breed"></label>
+      <label>Service
+        <select name="service">
+          <option>Nail Trim</option>
+          <option>Nail Grind</option>
+          <option>Trim + Grind</option>
+          <option>Add-on: Paw Pad Shave</option>
+        </select>
+      </label>
+      <label>Price ($)<input name="price" type="number" min="0" step="0.01" placeholder="15.00"></label>
+      <label>Date<input name="date" type="date" required></label>
+      <label>Time<input name="time" type="time" required></label>
+      <label>Location<input name="location" placeholder="Client address / meetup"></label>
+      <label>Status
+        <select name="status">
+          <option value="scheduled">Scheduled</option>
+          <option value="completed">Completed</option>
+          <option value="canceled">Canceled</option>
+        </select>
+      </label>
+      <label>Paid?
+        <select name="paid">
+          <option value="no">No</option>
+          <option value="yes">Yes</option>
+        </select>
+      </label>
+      <label class="full">Notes<textarea name="notes" rows="3" placeholder="Special handling, gate code, etc."></textarea></label>
+    </div>
+    <menu>
+      <button value="cancel">Cancel</button>
+      <button id="btnAddIcs" type="button" class="ghost">Add to Calendar</button>
+      <button id="btnSave" class="primary">Save</button>
+    </menu>
+  </form>
+</dialog>
+
+
+<dialog id="dlgReports">
+  <form method="dialog">
+    <h2>Reports & Totals</h2>
+    <div class="reportGrid">
+      <div class="card small"><div class="k">Completed (count)</div><div class="v" id="rCompleted">0</div></div>
+      <div class="card small"><div class="k">Paid Revenue</div><div class="v" id="rPaidRevenue">$0.00</div></div>
+      <div class="card small"><div class="k">Unpaid Scheduled</div><div class="v" id="rUnpaid">$0.00</div></div>
+    </div>
+    <h3>Last 6 Months</h3>
+    <div id="rMonthly"></div>
+    <menu>
+      <button value="cancel">Close</button>
+    </menu>
+  </form>
+</dialog>
+<footer>
+  <small>Offline-ready • Data stored on-device • PWA</small>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
