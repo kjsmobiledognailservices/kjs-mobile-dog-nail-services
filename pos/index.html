@@ -1,0 +1,24 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+<title>KJ’s Mobile Dog Nail Services POS</title><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="KJ's POS">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png"><link rel="manifest" href="manifest.webmanifest"><link rel="icon" sizes="192x192" href="icons/icon-192.png"><link rel="icon" sizes="512x512" href="icons/icon-512.png">
+<meta name="theme-color" content="#1877F2"><link rel="stylesheet" href="style.css"></head>
+<body><header><h1>🐾 KJ’s Mobile Dog Nail Services</h1><p class="subtitle">Point of Sale (Cash & Debit)</p></header>
+<main><section class="toolbar"><button id="btnClearCart" class="ghost">Clear</button><div class="spacer"></div><button id="btnSettings" class="ghost">Settings</button><button id="btnHistory">Sales</button></section>
+<section id="catalog" class="catalog"></section>
+<section id="cart" class="cart"><h2>Cart</h2><div id="cartItems" class="cartItems"></div>
+<div class="row"><div>Subtotal</div><div id="subtotal">$0.00</div></div>
+<div class="row"><div>Tax (<span id="taxRateLabel">0%</span>)</div><div id="tax">$0.00</div></div>
+<div class="row total"><div>Total</div><div id="total">$0.00</div></div>
+<div class="payActions"><button id="btnCash" class="primary">Cash</button><button id="btnDebit" class="primary outline">Debit</button><button id="btnShareReceipt" class="ghost">Share Receipt</button><button id="btnExport" class="ghost">Export CSV</button></div>
+</section></main>
+<dialog id="dlgCash"><form method="dialog" id="formCash"><h2>Cash Payment</h2><div class="grid"><label>Amount Tendered ($)<input name="tendered" type="number" step="0.01" min="0" required></label>
+<div class="row"><div>Change Due</div><div id="changeDue">$0.00</div></div></div><menu><button value="cancel">Cancel</button><button id="btnCompleteCash" class="primary">Complete Sale</button></menu></form></dialog>
+<dialog id="dlgDebit"><form method="dialog" id="formDebit"><h2>Debit Payment</h2><p>This records a debit sale. To actually charge a card, use your processor (e.g., Stripe/Square) or set a Stripe Payment Link in Settings.</p>
+<div class="grid"><label>Reference / Last 4<input name="ref" placeholder="Optional"></label></div><menu><button value="cancel">Cancel</button><button id="btnOpenStripe" class="ghost" type="button">Open Payment Link</button><button id="btnCompleteDebit" class="primary">Record as Paid</button></menu></form></dialog>
+<dialog id="dlgSettings"><form method="dialog" id="formSettings"><h2>Settings</h2><div class="grid">
+<label>Business Name<input name="biz" placeholder="KJ’s Mobile Dog Nail Services"></label>
+<label>Tax Rate (%)<input name="taxRate" type="number" step="0.01" min="0" placeholder="0"></label>
+<label>Stripe Payment Link URL<input name="stripeLink" placeholder="https://..."></label></div>
+<h3>Services & Prices</h3><div id="servicesEditor"></div><menu><button value="cancel">Cancel</button><button id="btnAddService" type="button" class="ghost">+ Add Service</button><button id="btnSaveSettings" class="primary">Save</button></menu></form></dialog>
+<dialog id="dlgHistory"><form method="dialog"><h2>Sales History</h2><div id="historyList"></div><menu><button value="cancel">Close</button></menu></form></dialog>
+<footer><small>Offline-ready • Add to Home Screen • Local sales log</small></footer><script src="app.js"></script></body></html>

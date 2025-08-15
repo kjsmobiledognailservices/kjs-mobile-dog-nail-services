@@ -1,0 +1,15 @@
+*{box-sizing:border-box}html,body{margin:0;padding:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:#f7f7fb;color:#121212}
+header{padding:16px 16px 6px;background:#1877F2;color:#fff;text-align:center}header h1{margin:0;font-size:22px}.subtitle{margin:4px 0 0;opacity:.9}
+main{padding:12px 12px 80px;max-width:980px;margin:0 auto}.toolbar{display:flex;gap:8px;align-items:center;background:#fff;padding:8px;border:1px solid #e5e7eb;border-radius:12px;position:sticky;top:8px}
+.spacer{flex:1}button{padding:10px 14px;border:0;border-radius:10px;cursor:pointer}button.primary{background:#1877F2;color:#fff}button.primary.outline{background:#fff;border:1px solid #1877F2;color:#1877F2}
+button.ghost{background:#fff;border:1px solid #d1d5db}.catalog{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px;margin-top:12px}
+.card{background:#fff;border:1px solid #e5e7eb;border-radius:14px;padding:12px;display:grid;gap:6px}.card header{display:flex;justify-content:space-between;align-items:center;background:transparent;color:inherit;padding:0}.card header h3{margin:0;font-size:18px}
+.card .price{font-size:16px;color:#111827}.card .desc{font-size:14px;color:#475569}.card .actions{display:flex;gap:8px}
+.cart{background:#fff;border:1px solid #e5e7eb;border-radius:14px;padding:12px;margin-top:12px}.cart h2{margin:4px 0 10px}.cartItems{display:grid;gap:8px}
+.cartItem{display:grid;grid-template-columns:1fr auto auto auto;gap:8px;align-items:center}.cartItem .qty{display:flex;gap:6px;align-items:center}
+.row{display:flex;justify-content:space-between;padding:6px 0}.row.total{font-weight:600;border-top:1px solid #e5e7eb;margin-top:6px;padding-top:10px}
+.payActions{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}dialog{border:0;border-radius:14px;max-width:680px;width:92vw}dialog::backdrop{background:rgba(0,0,0,.3)}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.grid label{display:flex;flex-direction:column;font-size:14px;gap:6px}
+input,textarea,select{padding:10px 12px;border:1px solid #d1d5db;border-radius:10px;background:#fff;font:inherit}menu{display:flex;gap:10px;justify-content:flex-end;padding:0;margin-top:8px}
+#historyList{display:grid;gap:8px;margin-top:8px}.historyItem{background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:10px;display:grid;gap:4px}
+@media (max-width:640px){.grid{grid-template-columns:1fr}.cartItem{grid-template-columns:1fr auto auto auto}}
