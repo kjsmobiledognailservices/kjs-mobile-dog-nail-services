@@ -10,7 +10,7 @@ body{margin:0;font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Arial,
 .paw-logo:before,.paw-logo:after{content:'';position:absolute;background:#fff;border-radius:50%}
 .paw-logo:before{width:9px;height:9px;top:6px;left:7px;box-shadow:14px 2px 0 0 #fff,28px 6px 0 0 #fff,18px 16px 0 0 #fff}
 .paw-logo:after{width:16px;height:16px;bottom:6px;right:8px}
-.top-nav{display:flex;gap:14px;align-items:center}
+.top-nav{display:flex;gap:10px;align-items:center}
 .top-nav a{color:#111827;text-decoration:none;padding:8px 10px;border-radius:8px;font-weight:600}
 .top-nav a:hover{background:#f3f4f6}
 .btn{display:inline-block;padding:12px 18px;border-radius:10px;border:1px solid #111827;font-weight:700;text-decoration:none;color:#111827}
@@ -86,3 +86,7 @@ body{margin:0;font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Arial,
 @media (max-width: 860px){
   #waiver .grid-2{grid-template-columns:1fr !important}
 }
+
+/* Tweak nav spacing and Book Now style */
+.top-nav a.btn{border:none;padding:8px 10px}
+.top-nav a.btn:hover{background:#f3f4f6}
