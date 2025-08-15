@@ -42,6 +42,7 @@
         <a href="#pricing">Pricing</a>
         <a href="#area">Service Area</a>
         <a href="#hours">Hours</a>
+        <a href="#waiver">Waiver</a>
         <a href="#contact" class="btn small">Book Now</a>
       </nav>
     </div>
@@ -95,7 +96,18 @@
       </div>
     </section>
 
-    <section id="pricing" class="section">
+    
+<section id="experience" class="section">
+  <div class="container">
+    <h3>Experience You Can Trust</h3>
+    <p>With over three years of hands‑on experience as a dedicated dog bather, I have cared for pets of all breeds, sizes, and temperaments. 
+    My work has given me the skills to ensure each dog feels comfortable, safe, and calm during grooming. 
+    This background means I understand canine body language, gentle handling techniques, and the importance of making each grooming session a positive experience. 
+    When you choose <strong>KJ’s Mobile Dog Nail Services</strong>, you’re trusting someone who treats your pet as if they were my own.</p>
+  </div>
+</section>
+
+<section id="pricing" class="section">
       <div class="container">
         <h3>Pricing</h3>
         <div class="price-grid">
@@ -116,6 +128,7 @@
             <p class="price">$10</p>
           </div>
         </div>
+        <p class="fine">*Rates are sample prices—customizable as your business grows.</p>
       </div>
     </section>
 
@@ -137,7 +150,78 @@
       </div>
     </section>
 
-    <section id="contact" class="section contact">
+    
+<section id="waiver" class="section">
+  <div class="container">
+    <h3>Client Acknowledgement & Liability Waiver</h3>
+    <p class="muted">Please review and submit this acknowledgement before booking. A copy will be emailed to you.</p>
+    <div class="card">
+      <p><strong>Important:</strong> KJ’s Mobile Dog Nail Services is <em>not</em> a licensed veterinary practice and does not provide veterinary medical advice, diagnosis, or treatment. Services are limited to basic nail care and related grooming.</p>
+      <p>If a dog displays aggression or behavior that makes the service unsafe, the appointment will end immediately, <strong>no fee will be charged</strong>, and you will be advised to seek assistance from a licensed veterinarian.</p>
+      <p>By submitting this form, you agree to release and hold harmless KJ’s Mobile Dog Nail Services, its owner, and representatives from liability for injury, illness, or damage to your pet, yourself, or others that may occur during or after services rendered. You confirm you are the legal owner or authorized agent of the pet(s) listed.</p>
+    </div>
+
+    
+<p style="margin-top: 10px;">
+    <a href="KJs_Mobile_Dog_Nail_Services_Waiver_WITH_CONTACT.pdf" class="btn secondary" download>📄 Download Printable Waiver (PDF)</a>
+</p>
+
+<form id="waiver-form" class="card form" action="https://formspree.io/f/xpwlndbp" method="POST">
+      <div class="grid-2">
+        <label>Owner Full Name
+          <input type="text" name="owner_name" placeholder="First and Last Name" required>
+        </label>
+        <label>Phone
+          <input type="text" name="owner_phone" placeholder="(737) 239‑9144" required>
+        </label>
+        <label>Email
+          <input type="email" name="owner_email" placeholder="you@example.com" required>
+        </label>
+        <label>Service Address (City/Area OK)
+          <input type="text" name="owner_address" placeholder="Bastrop, TX" required>
+        </label>
+      </div>
+
+      <div class="grid-2">
+        <label>Dog’s Name
+          <input type="text" name="dog_name" placeholder="Maggie or Maya" required>
+        </label>
+        <label>Breed & Approx. Weight
+          <input type="text" name="dog_breed_weight" placeholder="e.g., Rottweiler mix, ~60 lbs" required>
+        </label>
+      </div>
+
+      <label>Relevant Notes (anxiety, special handling, health concerns)
+        <textarea name="notes" rows="4" placeholder="Share anything we should know to keep your dog calm and safe."></textarea>
+      </label>
+
+      <div class="card" style="background:#f9fafb">
+        <label style="display:flex; gap:10px; align-items:flex-start">
+          <input type="checkbox" name="acknowledge_terms" required>
+          <span>I have read and agree to the acknowledgement and liability waiver above. I understand KJ’s Mobile Dog Nail Services is not a veterinarian, and that if my dog is aggressive or unhandleable, no fee will be charged and I will be referred to a licensed veterinarian.</span>
+        </label>
+      </div>
+
+      <div class="grid-2">
+        <label>Typed Signature (acts as legal signature)
+          <input type="text" name="signature" placeholder="Type your full legal name" required>
+        </label>
+        <label>Date
+          <input type="date" name="date" required>
+        </label>
+      </div>
+
+      <!-- Email subject and redirect -->
+      <input type="hidden" name="_subject" value="Signed Client Acknowledgement & Liability Waiver — KJ’s Mobile Dog Nail Services">
+      <input type="hidden" name="_next" value="https://kjsmobiledognailservices.github.io/kjs-mobile-dog-nail-services/?waiver=submitted">
+
+      <button type="submit" class="btn primary">Submit Acknowledgement</button>
+      <p class="fine">After submission, you will receive a confirmation email. We’ll review it and follow up to finalize your booking.</p>
+    </form>
+  </div>
+</section>
+
+<section id="contact" class="section contact">
       <div class="container grid-2">
         <div>
           <h3>Contact Us</h3>
@@ -146,25 +230,56 @@
             <li>💬 <a class="btn small" href="sms:+17372399144?&body=Hi%20KJ%E2%80%99s%2C%20I%E2%80%99d%20like%20to%20book%20a%20dog%20nail%20appointment.%20My%20name%20is%20____%20and%20my%20dog%20is%20a%20_____.%20Preferred%20date/time%3A%20____.">Book via Text</a></li>
             <li>📞 Call/Text: <a href="tel:+17372399144">7372399144</a></li>
             <li>📧 Email: <a href="mailto:kjsmobiledognailservices@gmail.com">kjsmobiledognailservices@gmail.com</a></li>
+            <li>📱 Facebook & Instagram: <a href="https://instagram.com/KJsMobileDogNailServices" target="_blank">@KJsMobileDogNailServices</a></li>
           </ul>
         </div>
-        <form class="card form" action="https://formspree.io/f/xpwlndbp" method="POST">
-          <label>Your Name<input name="name" type="text" placeholder="Jane Doe" required>
+        <form class="card form" action="#" method="post" onsubmit="event.preventDefault(); alert('Thanks! We will contact you to confirm your appointment.');">
+          <label>
+            Your Name
+            <input type="text" placeholder="Jane Doe" required>
           </label>
-          <label>Phone or Email<input name="contact" type="text" placeholder="(555) 555‑1234 or jane@example.com" required>
+          <label>
+            Phone or Email
+            <input type="text" placeholder="(555) 555‑1234 or jane@example.com" required>
           </label>
-          <label>Dog’s Name & Breed<input name="pet" type="text" placeholder="Buddy — Labrador mix" required>
+          <label>
+            Dog’s Name & Breed
+            <input type="text" placeholder="Buddy — Labrador mix" required>
           </label>
-          <label>Preferred Date<input name="date" type="date" required>
+          <label>
+            Preferred Date
+            <input type="date" required>
           </label>
-          <label>Notes<textarea name="message" rows="4" placeholder="Any details we should know (anxious pup, special handling, etc.)"></textarea>
+          <label>
+            Notes
+            <textarea rows="4" placeholder="Any details we should know (anxious pup, special handling, etc.)"></textarea>
           </label>
-          <input type="hidden" name="_subject" value="New Booking Request — KJ’s Mobile Dog Nail Services"><input type="hidden" name="_next" value="https://kjsmobiledognailservices.github.io/kjs-mobile-dog-nail-services/?submitted=1"><button type="submit" class="btn block">Request Appointment</button>
-          <p class="fine">We’ll confirm your appointment via text or email after you submit.</p>
+          <button type="submit" class="btn block">Request Appointment</button>
+          <p class="fine">Submissions are requests only—appointments are confirmed via text/email.</p>
         </form>
       </div>
     </section>
-  </main>
+  
+
+<section id="gallery" class="section">
+  <div class="container">
+    <h3>Our Happy Pups</h3>
+    <p class="muted">A peek at our own pups — calm, comfy, and paw‑fectly trimmed.</p>
+    <div class="dog-portrait-grid">
+      <figure>
+        <img src="assets/dog1_circle.png" alt="Maggie, a 6-year-old red Dogue de Bordeaux, smiling after her nail trim">
+        <figcaption><strong>Maggie</strong><br><span class="muted">6 years old</span></figcaption>
+      </figure>
+      <figure>
+        <img src="assets/dog2_circle.png" alt="Maya, a 7-year-old black and tan Rottweiler mix, sitting calmly after nail care">
+        <figcaption><strong>Maya</strong><br><span class="muted">7 years old</span></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+
+</main>
 
   <footer class="site-footer">
     <div class="container footer-inner">
@@ -180,9 +295,9 @@
 <script>
 (function(){
   const params = new URLSearchParams(window.location.search);
-  if (params.get('submitted') === '1') {
+  if (params.get('waiver') === 'submitted') {
     var d = document.createElement('div');
-    d.textContent = 'Thanks! Your request was sent. We will get back to you shortly.';
+    d.textContent = 'Thanks! Your acknowledgement was sent. We will email you a copy and follow up to book.';
     d.setAttribute('role','status');
     d.style.cssText = 'position:fixed;left:50%;transform:translateX(-50%);bottom:16px;background:#16a34a;color:#fff;padding:12px 16px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,.2);z-index:9999';
     document.body.appendChild(d);

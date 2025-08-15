@@ -37,7 +37,7 @@ body{margin:0;font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Arial,
 .price-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
 .price-card{border:1px solid #e5e7eb;border-radius:14px;padding:18px;text-align:center;background:#fff}
 .price-card .price{font-size:28px;margin:6px 0 0}
-.price-card.featured{outline:3px solid #111827}
+.price-card.featured{border:1px solid #e5e7eb}
 .fine{font-size:12px;color:#6b7280}
 .hours{list-style:none;padding-left:0;margin:0 0 8px}
 .appt-only{font-weight:700}
@@ -58,4 +58,31 @@ body{margin:0;font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Arial,
 @media (max-width: 520px){
   .price-grid{grid-template-columns:1fr}
   .top-nav{display:none}
+}
+
+/* Dog portrait gallery */
+.dog-portrait-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start;justify-items:center;margin-top:8px}
+.dog-portrait-grid figure{margin:0;text-align:center}
+.dog-portrait-grid img{width:260px;height:260px;border-radius:50%;box-shadow:0 10px 22px rgba(0,0,0,.12)}
+.dog-portrait-grid figcaption{margin-top:8px;color:#6b7280;font-size:14px}
+@media (max-width:720px){.dog-portrait-grid{grid-template-columns:1fr}.dog-portrait-grid img{width:220px;height:220px}}
+
+
+/* Dog name captions styling */
+.dog-portrait-grid figcaption strong {
+    display: block;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #111827;
+}
+.dog-portrait-grid figcaption .muted {
+    font-size: 0.95rem;
+    color: #6b7280;
+}
+
+
+/* Waiver form refinements */
+#waiver .card{margin-bottom:14px}
+@media (max-width: 860px){
+  #waiver .grid-2{grid-template-columns:1fr !important}
 }
