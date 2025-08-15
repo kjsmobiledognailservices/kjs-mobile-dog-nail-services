@@ -47,7 +47,6 @@
       </nav>
     </div>
   </header>
-
   <section class="hero">
     <div class="container hero-inner">
       <div class="hero-copy">
@@ -55,7 +54,7 @@
         <p>We bring professional nail trimming, grinding, and paw pad care to your door—minimizing stress for you and your dog.</p>
         <a href="#contact" class="btn">Request an Appointment</a>
         <a href="sms:+17372399144?&body=Hi%20KJ%E2%80%99s%2C%20I%E2%80%99d%20like%20to%20book%20a%20dog%20nail%20appointment.%20My%20name%20is%20____%20and%20my%20dog%20is%20a%20_____.%20Preferred%20date/time%3A%20____." class="btn">Text to Book</a>
-        <p class="appt-note">Appointment-only • Mon–Sat • 9:00 AM – 1:00 PM</p>
+        <p class="appt-note"></p>
       </div>
       <div class="hero-art" aria-hidden="true">
         <div class="paw big"></div>
@@ -64,7 +63,6 @@
       </div>
     </div>
   </section>
-
   <main>
     <section id="about" class="section">
       <div class="container">
@@ -72,20 +70,15 @@
         <p>At <strong>KJ’s Mobile Dog Nail Services</strong>, we believe paw care is just as important as playtime! We bring professional dog nail trimming, grinding, and paw pad care directly to your home. No stressful car rides, no waiting rooms—just a calm, convenient experience for both you and your furry friend.</p>
       </div>
     </section>
-
     <section id="services" class="section alt">
       <div class="container grid-2">
         <div>
           <h3>Our Services</h3>
           <ul class="checklist">
-            
-          <li><strong>Sunday:</strong> Closed</li>
         </ul>
-        <p class="appt-only">By Appointment Only</p>
+        <p class="appt-only"></p>
       </div>
     </section>
-
-    
 <section id="waiver" class="section">
   <div class="container">
     <h3>Client Acknowledgement & Liability Waiver</h3>
@@ -95,12 +88,9 @@
       <p>If a dog displays aggression or behavior that makes the service unsafe, the appointment will end immediately, <strong>no fee will be charged</strong>, and you will be advised to seek assistance from a licensed veterinarian.</p>
       <p>By submitting this form, you agree to release and hold harmless KJ’s Mobile Dog Nail Services, its owner, and representatives from liability for injury, illness, or damage to your pet, yourself, or others that may occur during or after services rendered. You confirm you are the legal owner or authorized agent of the pet(s) listed.</p>
     </div>
-
-    
 <p style="margin-top: 10px;">
     <a href="KJs_Mobile_Dog_Nail_Services_Waiver_WITH_CONTACT.pdf" class="btn secondary" download>📄 Download Printable Waiver (PDF)</a>
 </p>
-
 <form id="waiver-form" class="card form" action="https://formspree.io/f/xpwlndbp" method="POST">
       <div class="grid-2">
         <label>Owner Full Name
@@ -116,7 +106,6 @@
           <input type="text" name="owner_address" placeholder="Bastrop, TX" required>
         </label>
       </div>
-
       <div class="grid-2">
         <label>Dog’s Name
           <input type="text" name="dog_name" placeholder="Maggie or Maya" required>
@@ -125,18 +114,15 @@
           <input type="text" name="dog_breed_weight" placeholder="e.g., Rottweiler mix, ~60 lbs" required>
         </label>
       </div>
-
       <label>Relevant Notes (anxiety, special handling, health concerns)
         <textarea name="notes" rows="4" placeholder="Share anything we should know to keep your dog calm and safe."></textarea>
       </label>
-
       <div class="card" style="background:#f9fafb">
         <label style="display:flex; gap:10px; align-items:flex-start">
           <input type="checkbox" name="acknowledge_terms" required>
           <span>I have read and agree to the acknowledgement and liability waiver above. I understand KJ’s Mobile Dog Nail Services is not a veterinarian, and that if my dog is aggressive or unhandleable, no fee will be charged and I will be referred to a licensed veterinarian.</span>
         </label>
       </div>
-
       <div class="grid-2">
         <label>Typed Signature (acts as legal signature)
           <input type="text" name="signature" placeholder="Type your full legal name" required>
@@ -145,22 +131,17 @@
           <input type="date" name="date" required>
         </label>
       </div>
-
       <!-- Email subject and redirect -->
       <input type="hidden" name="_subject" value="Signed Client Acknowledgement & Liability Waiver — KJ’s Mobile Dog Nail Services">
       <input type="hidden" name="_next" value="https://kjsmobiledognailservices.github.io/kjs-mobile-dog-nail-services/?waiver=submitted">
-
       <button type="submit" class="btn primary">Submit Acknowledgement</button>
       <p class="fine">After submission, you will receive a confirmation email. We’ll review it and follow up to finalize your booking.</p>
     </form>
   </div>
 </section>
-
-
 <p><strong>Hours:</strong> Tuesday – Saturday: 9:00 AM – 1:00 PM<br>
 Closed: Sunday & Monday<br>
-By appointment only</p>
-
+</p>
 <section id="contact" class="section contact">
       <div class="container grid-2">
         <div>
@@ -199,8 +180,6 @@ By appointment only</p>
         </form>
       </div>
     </section>
-  
-
 <section id="gallery" class="section">
   <div class="container">
     <h3>Our Happy Pups</h3>
@@ -217,21 +196,16 @@ By appointment only</p>
     </div>
   </div>
 </section>
-
-
 </main>
-
   <footer class="site-footer">
     <div class="container footer-inner">
       <p>© <span id="year"></span> KJ’s Mobile Dog Nail Services • Bastrop, TX</p>
       <a href="#top" class="back-to-top">Back to top ↑</a>
     </div>
   </footer>
-
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
-
 <script>
 (function(){
   const params = new URLSearchParams(window.location.search);
@@ -245,6 +219,5 @@ By appointment only</p>
   }
 })();
 </script>
-
 </body>
 </html>
