@@ -90,3 +90,14 @@ body{margin:0;font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Arial,
 /* Tweak nav spacing and Book Now style */
 .top-nav a.btn{border:none;padding:8px 10px}
 .top-nav a.btn:hover{background:#f3f4f6}
+
+
+/* Services price grid (centered) */
+.price-grid{display:grid;gap:16px;justify-content:center;margin-top:10px}
+.price-grid .price-card{border:1px solid #e5e7eb;border-radius:14px;padding:16px;text-align:center;background:#fff;max-width:320px}
+.price-grid .price{font-weight:700;font-size:22px;margin:6px 0}
+@media(min-width:720px){.price-grid{grid-template-columns:repeat(2, minmax(220px, 1fr));}}
+@media(min-width:1024px){.price-grid{grid-template-columns:repeat(4, minmax(180px, 1fr));}}
+
+/* Hours inline under contact */
+.hours-inline{margin-top:14px;text-align:center;color:#111827}
