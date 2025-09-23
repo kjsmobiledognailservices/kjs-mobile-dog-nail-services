@@ -152,30 +152,32 @@
       <li>📧 Email: <a href="mailto:kjsmobiledognailservices@gmail.com">kjsmobiledognailservices@gmail.com</a></li>
     </ul>
 
-    <form class="card form" action="#" method="post" onsubmit="event.preventDefault(); alert('Thanks! We will contact you to confirm your appointment.');">
-      <label>
-        Your Name
-        <input type="text" placeholder="Jane Doe" required>
-      </label>
-      <label>
-        Phone or Email
-        <input type="text" placeholder="(555) 555-1234 or jane@example.com" required>
-      </label>
-      <label>
-        Dog’s Name & Breed
-        <input type="text" placeholder="Buddy — Labrador mix" required>
-      </label>
-      <label>
-        Preferred Date
-        <input type="date" required>
-      </label>
-      <label>
-        Notes
-        <textarea rows="4" placeholder="Any details we should know (anxious pup, special handling, etc.)"></textarea>
-      </label>
-      <button type="submit" class="btn block">Request Appointment</button>
-      <p class="fine">Submissions are requests only—appointments are confirmed via text/email.</p>
-    </form>
+    
+<form class="card form" action="https://formspree.io/f/xpwlndbp" method="POST">
+  <label>
+    Your Name
+    <input type="text" name="owner_name" placeholder="Jane Doe" required>
+  </label>
+  <label>
+    Phone or Email
+    <input type="text" name="owner_contact" placeholder="(555) 555-1234 or jane@example.com" required>
+  </label>
+  <label>
+    Dog’s Name & Breed
+    <input type="text" name="dog_name_breed" placeholder="Buddy — Labrador mix" required>
+  </label>
+  <label>
+    Preferred Date
+    <input type="date" name="preferred_date" required>
+  </label>
+  <label>
+    Notes
+    <textarea name="notes" rows="4" placeholder="Any details we should know (anxious pup, special handling, etc.)"></textarea>
+  </label>
+  <button type="submit" class="btn block">Request Appointment</button>
+  <p class="fine">Submissions are requests only—appointments are confirmed via text/email.</p>
+</form>
+
 
     <div class="hours-inline">
       <strong>Hours:</strong> Tuesday – Saturday: 9:00 AM – 1:00 PM &nbsp; • &nbsp; Closed: Sunday & Monday
