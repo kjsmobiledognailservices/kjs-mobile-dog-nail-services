@@ -55,4 +55,78 @@
     <div class="container">
       <h2>Book an Appointment</h2>
       <p class="lead">Fill out the form below, and we’ll confirm via text or email.</p>
-      <form class
+      <form class="card form" action="https://formspree.io/f/xpwlndbp" method="POST">
+        <label>Your Name
+          <input type="text" name="owner_name" required>
+        </label>
+        <label>Phone or Email
+          <input type="text" name="owner_contact" required>
+        </label>
+        <label>Dog’s Name & Breed
+          <input type="text" name="dog_name_breed" required>
+        </label>
+        <label>Preferred Date
+          <input type="date" name="preferred_date" required>
+        </label>
+        <label>Notes
+          <textarea name="notes" rows="3"></textarea>
+        </label>
+
+        <!-- Waiver Acknowledgement -->
+        <label style="display:flex; gap:10px; align-items:flex-start; margin-top:1rem;">
+          <input type="checkbox" name="acknowledge_terms" required>
+          <span>
+            I have read and agree to the 
+            <a href="KJs_Mobile_Dog_Nail_Services_Waiver_WITH_CONTACT.pdf" target="_blank">Acknowledgement & Liability Waiver</a>.
+            I understand KJ’s Mobile Dog Nail Services is not a veterinarian, and that if my dog is aggressive or unsafe to handle, no fee will be charged and I will be referred to a licensed veterinarian.
+          </span>
+        </label>
+
+        <button type="submit" class="btn block">Request Appointment</button>
+      </form>
+      <p class="fine">You’ll receive a confirmation by text/email. Waiver will be provided after booking.</p>
+    </div>
+  </section>
+
+  <!-- Hours & Contact -->
+  <section id="info" class="section">
+    <div class="container">
+      <h2>Hours & Contact</h2>
+      <p><strong>Hours:</strong> Tue – Sat, 9:00 AM – 1:00 PM</p>
+      <ul class="contact-list">
+        <li>📱 Text: <a href="sms:+17372399144">737-239-9144</a></li>
+        <li>📞 Call: <a href="tel:+17372399144">737-239-9144</a></li>
+        <li>📧 Email: <a href="mailto:kjsmobiledognailservices@gmail.com">kjsmobiledognailservices@gmail.com</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section id="gallery" class="section alt">
+    <div class="container">
+      <h2>Our Happy Pups</h2>
+      <div class="dog-portrait-grid">
+        <figure>
+          <img src="dog2_circle.png" alt="Maya after her nail trim">
+          <figcaption><strong>Maya</strong>, 7 yrs</figcaption>
+        </figure>
+        <figure>
+          <img src="dog1_circle.png" alt="Maggie after her nail trim">
+          <figcaption><strong>Maggie</strong>, 6 yrs</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> KJ’s Mobile Dog Nail Services • Bastrop, TX</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
